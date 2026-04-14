@@ -1,0 +1,54 @@
+# ── Environment & Secrets ──────────────────────────────────────────────────
+.env
+*.env
+!.env.example
+
+# ── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ── Virtual Environments ───────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── Vector DB / Data ───────────────────────────────────────────────────────
+data/chroma_db/
+*.sqlite3
+*.db
+
+# ── Model Cache ────────────────────────────────────────────────────────────
+.cache/
+models/
+
+# ── Testing ────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# ── IDE ────────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# ── Logs ───────────────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ── AI Agent / IDE Metadata ────────────────────────────────────────────────
+.agents/
+.augment/
+.gemini/
+skills-lock.json
+DEVELOPMENT_PROMPT.md
