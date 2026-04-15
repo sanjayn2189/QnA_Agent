@@ -153,6 +153,12 @@ Q&A_Agent/
 ├── scripts/
 │   └── ingest.py                  ← CLI: python scripts/ingest.py [--force]
 │
+├── eval/
+│   ├── eval_dataset.json          ← Query → expected source pairs (15 items)
+│   ├── recall_at_k.py             ← Recall@K + MRR retrieval evaluation script
+│   ├── context_quality.py         ← LLM-as-judge context quality evaluation
+│   └── answer_quality.py          ← End-to-end answer quality evaluation
+│
 ├── tests/
 │   ├── conftest.py
 │   ├── test_ingestion.py
@@ -338,6 +344,9 @@ This section tracks the history of completed milestones. **Update this after eve
 | 2026-04-10 | **Confidence Score**                                  | LLM self-assesses confidence (0-100%). Extracted via regex, displayed with green/orange/red color coding.      |
 | 2026-04-10 | **ChromaDB Singleton & Auto-Recovery**                | Implemented `__new__` singleton for VectorStoreManager. Added auto-refresh on "Collection does not exist".     |
 | 2026-04-10 | **Chunk Overlap Reduced**                             | Changed from 200 (20%) to 100 (10%) overlap. Re-ingested all documents.                                       |
+| 2026-04-15 | **Recall@K + MRR Evaluation**                         | Added plug-and-play retrieval eval. Recall@6=100%, MRR=0.9556. Query 13 revealed rank-3 placement for "probation period" — signals a real retrieval gap worth monitoring. |
+| 2026-04-15 | **Context Quality Evaluation**                        | LLM-as-judge scoring relevance/completeness/noise per query. Results: Avg Relevance=0.77, Completeness=0.71, Noise=0.49. Query 13 (probation period) confirmed as critical gap: Relevance=0.20, Noise=0.90. |
+| 2026-04-15 | **Answer Quality Evaluation**                         | End-to-end LLM-as-judge eval running full CRAG pipeline. 14/15 queries scored (1 hit Groq TPD rate limit). Avg Overall=0.86, Faithfulness=0.91, Correctness=0.90, Completeness=0.82, Conciseness=0.69. Zero hallucinations detected. Weakest: disciplinary action process (0.70) and misconduct definition (0.70) — both caused by vague/incomplete chunking of conduct policy. |
 
 ---
 
@@ -387,8 +396,20 @@ make install
 make ingest
 make run
 make test
+
+# Run retrieval evaluation (Recall@K + MRR)
+python eval/recall_at_k.py            # default K=6 → prints Recall@K + MRR
+python eval/recall_at_k.py --k 3      # test with smaller K (harder)
+
+# Run context quality evaluation (LLM-as-judge)
+python eval/context_quality.py        # default K=6 → relevance/completeness/noise
+python eval/context_quality.py --k 3 --top-n 5   # smaller K, show 5 worst queries
+
+# Run end-to-end answer quality evaluation (LLM-as-judge)
+python eval/answer_quality.py         # runs full CRAG pipeline per query
+python eval/answer_quality.py --top-n 5          # show 5 worst answers
 ```
 
 ---
 
-*Last updated: 2026-04-14 | Version: 1.1.0 | Maintainer: Ramya Velaga*
+*Last updated: 2026-04-15 | Version: 1.5.0 | Maintainer: Sanjay N*

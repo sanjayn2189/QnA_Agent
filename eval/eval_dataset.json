@@ -1,0 +1,62 @@
+[
+  {
+    "query": "What is the remote work policy?",
+    "expected_source": "Remote Work Policy"
+  },
+  {
+    "query": "How do I apply for leave of absence?",
+    "expected_source": "Leave of Absence Policy"
+  },
+  {
+    "query": "What happens during employee onboarding?",
+    "expected_source": "Employee Onboarding Policy"
+  },
+  {
+    "query": "What are the rules for employee conduct?",
+    "expected_source": "Employee Conduct Policy"
+  },
+  {
+    "query": "What training programs are available?",
+    "expected_source": "Training & Development Policy"
+  },
+  {
+    "query": "Can I work from home permanently?",
+    "expected_source": "Remote Work Policy"
+  },
+  {
+    "query": "What is the disciplinary action process?",
+    "expected_source": "Employee Conduct Policy"
+  },
+  {
+    "query": "How do I request time off for medical reasons?",
+    "expected_source": "Leave of Absence Policy"
+  },
+  {
+    "query": "What equipment is provided for remote workers?",
+    "expected_source": "Remote Work Policy"
+  },
+  {
+    "query": "What is the new hire orientation process?",
+    "expected_source": "Employee Onboarding Policy"
+  },
+  {
+    "query": "Are there mandatory training requirements?",
+    "expected_source": "Training & Development Policy"
+  },
+  {
+    "query": "What behavior is considered misconduct?",
+    "expected_source": "Employee Conduct Policy"
+  },
+  {
+    "query": "How long is the probation period for new employees?",
+    "expected_source": "Employee Onboarding Policy"
+  },
+  {
+    "query": "Can I take unpaid leave?",
+    "expected_source": "Leave of Absence Policy"
+  },
+  {
+    "query": "What are the working hours for remote employees?",
+    "expected_source": "Remote Work Policy"
+  }
+]

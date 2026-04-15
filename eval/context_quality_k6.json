@@ -1,0 +1,250 @@
+{
+  "k": 6,
+  "total": 15,
+  "evaluated": 15,
+  "avg_relevance": 0.7733,
+  "avg_completeness": 0.71,
+  "avg_noise": 0.4933,
+  "details": [
+    {
+      "query": "What is the remote work policy?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.9,
+      "completeness": 0.8,
+      "noise": 0.2,
+      "explanation": "The retrieved context is highly relevant and mostly complete, but contains some noise due to the inclusion of related policies and redundant information."
+    },
+    {
+      "query": "How do I apply for leave of absence?",
+      "expected_source": "Leave of Absence Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Employee Onboarding Policy",
+        "Training & Development Policy",
+        "Employee Conduct Policy"
+      ],
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "noise": 0.4,
+      "explanation": "The retrieved context is highly relevant and complete in addressing the query about applying for leave of absence, but contains some noise from unrelated policies."
+    },
+    {
+      "query": "What happens during employee onboarding?",
+      "expected_source": "Employee Onboarding Policy",
+      "retrieved_sources": [
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Training & Development Policy",
+        "Leave of Absence Policy"
+      ],
+      "relevance": 0.9,
+      "completeness": 0.8,
+      "noise": 0.4,
+      "explanation": "The retrieved context is highly relevant and mostly complete in answering the query about employee onboarding, but contains some noise due to the inclusion of related policies and redundant information."
+    },
+    {
+      "query": "What are the rules for employee conduct?",
+      "expected_source": "Employee Conduct Policy",
+      "retrieved_sources": [
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Leave of Absence Policy",
+        "Employee Conduct Policy"
+      ],
+      "relevance": 0.9,
+      "completeness": 0.8,
+      "noise": 0.2,
+      "explanation": "The retrieved context is highly relevant and mostly complete, but contains some noise due to overlapping policies and redundant information."
+    },
+    {
+      "query": "What training programs are available?",
+      "expected_source": "Training & Development Policy",
+      "retrieved_sources": [
+        "Training & Development Policy",
+        "Training & Development Policy",
+        "Employee Onboarding Policy",
+        "Leave of Absence Policy",
+        "Remote Work Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.9,
+      "completeness": 0.8,
+      "noise": 0.4,
+      "explanation": "The retrieved context is highly relevant and mostly complete in addressing the query about available training programs, but contains some noise due to the inclusion of unrelated policies and procedures."
+    },
+    {
+      "query": "Can I work from home permanently?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Leave of Absence Policy",
+        "Training & Development Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.7,
+      "completeness": 0.4,
+      "noise": 0.8,
+      "explanation": "The retrieved context is somewhat relevant to the query about working from home permanently, but it is incomplete and contains a significant amount of noise from unrelated policies."
+    },
+    {
+      "query": "What is the disciplinary action process?",
+      "expected_source": "Employee Conduct Policy",
+      "retrieved_sources": [
+        "Employee Conduct Policy",
+        "Leave of Absence Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.6,
+      "completeness": 0.4,
+      "noise": 0.7,
+      "explanation": "The retrieved context is somewhat relevant to the query about disciplinary action process, but it is incomplete and contains a significant amount of noise from unrelated policies and procedures."
+    },
+    {
+      "query": "How do I request time off for medical reasons?",
+      "expected_source": "Leave of Absence Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Employee Conduct Policy",
+        "Training & Development Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "noise": 0.6,
+      "explanation": "The retrieved context is highly relevant and complete in addressing the query about requesting time off for medical reasons, but contains some noise due to the inclusion of unrelated policies and procedures."
+    },
+    {
+      "query": "What equipment is provided for remote workers?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Employee Conduct Policy",
+        "Training & Development Policy",
+        "Employee Conduct Policy"
+      ],
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "noise": 0.6,
+      "explanation": "The retrieved context is highly relevant and complete in answering the query about equipment provided for remote workers, but contains some noisy information from overlapping policies."
+    },
+    {
+      "query": "What is the new hire orientation process?",
+      "expected_source": "Employee Onboarding Policy",
+      "retrieved_sources": [
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Employee Onboarding Policy",
+        "Leave of Absence Policy"
+      ],
+      "relevance": 0.9,
+      "completeness": 0.8,
+      "noise": 0.2,
+      "explanation": "The retrieved context is highly relevant and mostly complete, but contains some noise due to overlapping policies and redundant information."
+    },
+    {
+      "query": "Are there mandatory training requirements?",
+      "expected_source": "Training & Development Policy",
+      "retrieved_sources": [
+        "Training & Development Policy",
+        "Training & Development Policy",
+        "Training & Development Policy",
+        "Training & Development Policy",
+        "Employee Conduct Policy",
+        "Leave of Absence Policy"
+      ],
+      "relevance": 0.9,
+      "completeness": 0.95,
+      "noise": 0.4,
+      "explanation": "The retrieved context is highly relevant and complete in answering the query about mandatory training requirements, but contains some noise due to the inclusion of unrelated policies and redundant information."
+    },
+    {
+      "query": "What behavior is considered misconduct?",
+      "expected_source": "Employee Conduct Policy",
+      "retrieved_sources": [
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Leave of Absence Policy"
+      ],
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "noise": 0.4,
+      "explanation": "The retrieved context is highly relevant and complete in addressing the query about misconduct behavior, but contains some noise due to the inclusion of unrelated policies and redundant information."
+    },
+    {
+      "query": "How long is the probation period for new employees?",
+      "expected_source": "Employee Onboarding Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Employee Conduct Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy",
+        "Training & Development Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.2,
+      "completeness": 0.0,
+      "noise": 0.9,
+      "explanation": "The retrieved context is largely irrelevant and noisy, lacking any direct information about the probation period for new employees."
+    },
+    {
+      "query": "Can I take unpaid leave?",
+      "expected_source": "Leave of Absence Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Leave of Absence Policy",
+        "Training & Development Policy",
+        "Remote Work Policy"
+      ],
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "noise": 0.4,
+      "explanation": "The retrieved context is highly relevant and complete in answering the query about unpaid leave, but contains some noise due to the inclusion of unrelated policies and procedures."
+    },
+    {
+      "query": "What are the working hours for remote employees?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Remote Work Policy",
+        "Employee Conduct Policy",
+        "Leave of Absence Policy",
+        "Employee Onboarding Policy"
+      ],
+      "relevance": 0.7,
+      "completeness": 0.4,
+      "noise": 0.8,
+      "explanation": "The retrieved context is somewhat relevant but incomplete and noisy, requiring the user to sift through extensive policy details to potentially find the working hours for remote employees."
+    }
+  ]
+}

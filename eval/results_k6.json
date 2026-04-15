@@ -1,0 +1,193 @@
+{
+  "recall_at_k": 1.0,
+  "mrr": 0.9556,
+  "k": 6,
+  "hits": 15,
+  "total": 15,
+  "details": [
+    {
+      "query": "What is the remote work policy?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "How do I apply for leave of absence?",
+      "expected_source": "Leave of Absence Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Employee Onboarding Policy",
+        "Training & Development Policy",
+        "Employee Conduct Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What happens during employee onboarding?",
+      "expected_source": "Employee Onboarding Policy",
+      "retrieved_sources": [
+        "Employee Onboarding Policy",
+        "Training & Development Policy",
+        "Leave of Absence Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What are the rules for employee conduct?",
+      "expected_source": "Employee Conduct Policy",
+      "retrieved_sources": [
+        "Employee Conduct Policy",
+        "Leave of Absence Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What training programs are available?",
+      "expected_source": "Training & Development Policy",
+      "retrieved_sources": [
+        "Training & Development Policy",
+        "Employee Onboarding Policy",
+        "Leave of Absence Policy",
+        "Remote Work Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "Can I work from home permanently?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Leave of Absence Policy",
+        "Training & Development Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What is the disciplinary action process?",
+      "expected_source": "Employee Conduct Policy",
+      "retrieved_sources": [
+        "Employee Conduct Policy",
+        "Leave of Absence Policy",
+        "Employee Onboarding Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "How do I request time off for medical reasons?",
+      "expected_source": "Leave of Absence Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Employee Conduct Policy",
+        "Training & Development Policy",
+        "Employee Onboarding Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What equipment is provided for remote workers?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Employee Conduct Policy",
+        "Training & Development Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What is the new hire orientation process?",
+      "expected_source": "Employee Onboarding Policy",
+      "retrieved_sources": [
+        "Employee Onboarding Policy",
+        "Leave of Absence Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "Are there mandatory training requirements?",
+      "expected_source": "Training & Development Policy",
+      "retrieved_sources": [
+        "Training & Development Policy",
+        "Employee Conduct Policy",
+        "Leave of Absence Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What behavior is considered misconduct?",
+      "expected_source": "Employee Conduct Policy",
+      "retrieved_sources": [
+        "Employee Conduct Policy",
+        "Leave of Absence Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "How long is the probation period for new employees?",
+      "expected_source": "Employee Onboarding Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Employee Conduct Policy",
+        "Employee Onboarding Policy",
+        "Training & Development Policy"
+      ],
+      "hit": true,
+      "rank": 3,
+      "reciprocal_rank": 0.3333
+    },
+    {
+      "query": "Can I take unpaid leave?",
+      "expected_source": "Leave of Absence Policy",
+      "retrieved_sources": [
+        "Leave of Absence Policy",
+        "Training & Development Policy",
+        "Remote Work Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "query": "What are the working hours for remote employees?",
+      "expected_source": "Remote Work Policy",
+      "retrieved_sources": [
+        "Remote Work Policy",
+        "Employee Conduct Policy",
+        "Leave of Absence Policy",
+        "Employee Onboarding Policy"
+      ],
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0
+    }
+  ]
+}
