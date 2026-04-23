@@ -2,7 +2,8 @@
 LangGraph StateGraph builder for the CRAG (Corrective-RAG) agent.
 
 Graph flow:
-  query_analyzer → [greeting? → END] → retriever → relevance_grader
+  security_check → [blocked? → END] → query_analyzer
+    → [greeting? → END] → retriever → relevance_grader
     → [relevant? → answer_generator → END]
     → [not relevant? → query_rewriter → retriever → ...]
 """
@@ -11,6 +12,8 @@ from langgraph.graph import StateGraph, END
 
 from src.agent.state import AgentState
 from src.agent.nodes import (
+    security_check_node,
+    route_after_security,
     query_analyzer_node,
     retriever_node,
     relevance_grader_node,
@@ -32,6 +35,7 @@ def build_graph():
     workflow = StateGraph(AgentState)
 
     # ── Add nodes ─────────────────────────────────────────────────────────
+    workflow.add_node("security_check", security_check_node)
     workflow.add_node("query_analyzer", query_analyzer_node)
     workflow.add_node("retriever", retriever_node)
     workflow.add_node("relevance_grader", relevance_grader_node)
@@ -40,14 +44,25 @@ def build_graph():
 
     # ── Define edges ──────────────────────────────────────────────────────
 
-    # Entry point
-    workflow.set_entry_point("query_analyzer")
+    # Entry point: security check runs first on every query
+    workflow.set_entry_point("security_check")
+
+    # After security: blocked queries stop, safe queries continue
+    workflow.add_conditional_edges(
+        "security_check",
+        route_after_security,
+        {
+            "blocked": END,
+            "safe": "query_analyzer",
+        },
+    )
 
     # After analyzer: either greeting (done) or proceed to retriever
     workflow.add_conditional_edges(
         "query_analyzer",
         route_after_analyzer,
         {
+            "retry": "query_analyzer",
             "done": END,
             "retrieve": "retriever",
         },
@@ -61,6 +76,7 @@ def build_graph():
         "relevance_grader",
         route_after_grading,
         {
+            "retry": "relevance_grader",
             "generate": "answer_generator",
             "rewrite": "query_rewriter",
         },

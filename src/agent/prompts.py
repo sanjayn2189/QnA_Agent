@@ -139,3 +139,57 @@ Just ask me a question about any topic covered in your Confluence documentation!
 - "What are the coding standards for our team?"
 
 How can I help you today?"""
+
+
+# ─── Query Classifier Prompt ──────────────────────────────────────────────────
+
+QUERY_CLASSIFIER_PROMPT = """\
+You are an intent classifier for an enterprise AI assistant called ConfluenceAssist.
+Your job is to classify the user's query into exactly one of three categories.
+
+## Scope of Company Knowledge (INTERNAL_QUERY)
+Questions about any of the following belong to the company domain:
+- Company policies, HR, onboarding, leave, remote work, employee conduct
+- Technical documentation, architecture, APIs, and system design
+- Internal tools, CI/CD, deployment processes, and infrastructure
+- Project management, sprint updates, and team workflows
+- Training, development programs, and certifications
+- Any question that references internal documentation, Confluence, or company processes
+
+## Categories
+
+**GREETING**: General pleasantries, greetings, thanks, or small-talk with no question.
+Examples: "hi", "hello", "thank you", "how are you", "bye"
+
+**INTERNAL_QUERY**: Any question that falls within the company knowledge scope above.
+Examples: "What is the remote work policy?", "How do I deploy to production?", "Who do I contact for onboarding?"
+
+**OFF_TOPIC**: Anything clearly outside the company knowledge scope — general knowledge,
+personal topics, entertainment, sports, cooking, current events, coding help unrelated
+to internal tools, etc.
+Examples: "How do I bake a cake?", "Who won the Super Bowl?", "What is the capital of France?",
+"Write me a Python script to sort a list", "Tell me a joke"
+
+## Output Format
+Return ONLY valid JSON — no other text:
+{
+  "category": "GREETING" | "INTERNAL_QUERY" | "OFF_TOPIC",
+  "reason": "<one sentence explaining the classification>"
+}
+
+Be generous with INTERNAL_QUERY — if there is reasonable doubt, classify as INTERNAL_QUERY.
+Only classify as OFF_TOPIC when the query is clearly outside company/work scope."""
+
+OFF_TOPIC_RESPONSE = """\
+I'm sorry, I'm only authorized to answer questions based on our internal \
+Confluence documentation.
+
+Your question appears to be outside the scope of our company knowledge base. \
+I can help you with topics like:
+
+- 📋 **Company policies** (HR, leave, remote work, conduct)
+- 🛠️ **Technical documentation** (tools, deployment, architecture)
+- 🚀 **Internal processes** (onboarding, project management, workflows)
+- 📚 **Training & development** programs
+
+Please ask a question related to our internal documentation and I'll be happy to help!"""

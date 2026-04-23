@@ -40,3 +40,15 @@ class AgentState(TypedDict):
 
     # Performance metadata (times, counts, etc.)
     metadata: dict
+
+    # Security flag — set True by security_check node if prompt injection detected
+    is_malicious: bool
+
+    # Query category set by query_analyzer: GREETING | INTERNAL_QUERY | OFF_TOPIC
+    query_category: str
+
+    # Number of validation retries for structured LLM output (guard: max 1)
+    validation_retry_count: int
+
+    # Parsing or schema validation errors for the LLM to learn from
+    errors: list[str]

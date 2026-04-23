@@ -52,3 +52,24 @@ logs/
 .gemini/
 skills-lock.json
 DEVELOPMENT_PROMPT.md
+# Added by code-review-graph
+.code-review-graph/
+
+# ── AI Tool Config / Instruction Files ─────────────────────────────────────
+GEMINI.md
+AGENTS.md
+CLAUDE.md
+.cursorrules
+.windsurfrules
+.claude/
+.kiro/
+.mcp.json
+.opencode.json
+
+# ── Scratch / Temporary Dev Scripts ────────────────────────────────────────
+scratch.py
+fix_nodes.py
+server.log
+
+# ── Project Blueprint (personal reference) ─────────────────────────────────
+PROJECT.md
